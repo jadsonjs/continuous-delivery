@@ -16,7 +16,7 @@ cache:
 deploy:
   provider: heroku
   api_key:
-    secure: baa8892d-74c6-4856-85e3-1e20e3c7a713
+    secure: $HEROKU_API_KEY
   app: continuous-delivery-heroku
   on:
     repo: jadsonjs/continuous-delivery
