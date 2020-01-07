@@ -60,8 +60,8 @@ public class MessageControllerTest {
         ResultActions resultActions = mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("welcome"))
-                .andExpect(model().attribute("message", equalTo("This is a thymeleaf Server Side Application")))
-                .andExpect(content().string(containsString("This is a thymeleaf Server Side Application")));
+                .andExpect(model().attribute("message", equalTo("This is a simple Java Application")))
+                .andExpect(content().string(containsString("This is a simple Java Application")));
 
         MvcResult mvcResult = resultActions.andReturn();
         ModelAndView mv = mvcResult.getModelAndView();
