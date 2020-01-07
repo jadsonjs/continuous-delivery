@@ -10,5 +10,13 @@ sudo: false
 # cache the build tool's caches
 cache:
   directories:
-    - $HOME/.m2
     - $HOME/.gradle
+
+# configuration to deploy our application to HEROKU
+deploy:
+  provider: heroku
+  api_key:
+    secure: baa8892d-74c6-4856-85e3-1e20e3c7a713
+  app: continuous-delivery-heroku
+  on:
+    repo: jadsonjs/continuous-delivery
